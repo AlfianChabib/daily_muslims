@@ -1,10 +1,33 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
+
+import Home from "./pages/Home.jsx";
+import SurahList from "./pages/SurahList";
+import LastRead from "./pages/LastRead";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/surahlist",
+    element: <SurahList />,
+  },
+  {
+    path: "/lastread",
+    element: <LastRead />,
+  },
+  {
+    path: "/favorit",
+    element: <SurahList />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
