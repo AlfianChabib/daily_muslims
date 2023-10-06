@@ -6,6 +6,7 @@ import "./index.css";
 import Home from "./pages/Home.jsx";
 import SurahList from "./pages/SurahList";
 import LastRead from "./pages/LastRead";
+import Favorit from "./pages/Favorit";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/favorit",
-    element: <SurahList />,
+    element: <Favorit />,
   },
 ]);
 
