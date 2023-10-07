@@ -1,3 +1,4 @@
+import ListCard from "../components/ListCard";
 import Start from "../components/Start";
 import Navbar from "../components/templates/Navbar/Navbar";
 import NavbarTop from "../components/templates/Navbar/NavbarTop";
@@ -9,17 +10,49 @@ import { useStart } from "../stores/Start";
 export default function Home() {
   const { start, toggleStart } = useStart();
   return (
-    <>
-      <NavbarTop text={"Daily Muslims"}/>
-      <section>
-        {start && <Start toggleStart={toggleStart} />}
-        <h1>home Page</h1>
-      </section>
-      <Navbar>
+    <section className="">
+      {start && <Start toggleStart={toggleStart} />}
+      <NavbarTop text={"Daily Muslims"} />
+      <div className="flex flex-col px-4 mt-4">
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+      </div>
+      <Navbar variant="sticky">
         <HomeIcon active={true} />
         <StarIcon />
         <SaveIcon />
       </Navbar>
-    </>
+    </section>
   );
 }

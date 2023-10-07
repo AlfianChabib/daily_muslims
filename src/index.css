@@ -4,19 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "LPMQ";
+  /* src: url(./assets/font/LPMQ\ IsepMisbah.ttf); */
+  src: url(./assets/font/LPMQ.ttf);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: gray;
 }
 
 section {
-  @apply flex flex-col w-full max-w-md min-h-screen;
-}
-
-@font-face {
-  font-family: "LPMQ IsepMisbah";
-  src: url(./assets/font/LPMQ\ IsepMisbah.ttf);
+  @apply flex flex-col relative bg-white max-w-xl mx-auto min-h-screen;
 }
 
 .arabic {
-  @apply font-LPMQ
+  font-family: LPMQ;
 }

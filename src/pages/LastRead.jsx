@@ -6,16 +6,16 @@ import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 
 export default function LastRead() {
   return (
-    <>
+    <section>
       <NavbarTop text={"Terakhir Dibaca"} />
       <div>
         <h1>Last Read</h1>
-        <Navbar>
-          <HomeIcon />
-          <StarIcon />
-          <SaveIcon active={true} />
-        </Navbar>
       </div>
-    </>
+      <Navbar variant="absolute">
+        <HomeIcon />
+        <StarIcon />
+        <SaveIcon active={true} />
+      </Navbar>
+    </section>
   );
 }

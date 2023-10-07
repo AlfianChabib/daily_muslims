@@ -6,16 +6,16 @@ import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 
 export default function Favorit() {
   return (
-    <>
-      <NavbarTop text={"Surah Favorit"}/>
+    <section>
+      <NavbarTop text={"Surah Favorit"} />
       <div>
         <h1>Favorit</h1>
-        <Navbar>
-          <HomeIcon />
-          <StarIcon active={true} />
-          <SaveIcon />
-        </Navbar>
       </div>
-    </>
+      <Navbar variant="absolute">
+        <HomeIcon />
+        <StarIcon active={true} />
+        <SaveIcon />
+      </Navbar>
+    </section>
   );
 }

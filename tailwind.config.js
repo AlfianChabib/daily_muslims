@@ -5,10 +5,11 @@ export default {
     extend: {
       backgroundImage: {
         "bg-view": "url('/src/assets/bg-view.png')",
+        "bg-nomor": "url('/src/assets/nomor.svg')",
       },
       fontFamily: {
-        "LPMQ": ["LPMQ IsepMisbah"]
-      }
+        LPMQ: ["LPMQ IsepMisbah"],
+      },
     },
   },
   plugins: [],
