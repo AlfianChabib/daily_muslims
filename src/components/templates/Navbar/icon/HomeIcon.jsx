@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 HomeIcon.propTypes = {
   active: PropTypes.bool,
 };
+
 export default function HomeIcon(props) {
   const { active } = props;
 
