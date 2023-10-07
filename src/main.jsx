@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import LastRead from "./pages/LastRead";
 import Favorit from "./pages/Favorit";
 import Error from "./pages/Error";
+import Surah from "./pages/Surah";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/favorit",
     element: <Favorit />,
+  },
+  {
+    path: "/surah/:id",
+    element: <Surah />,
   },
 ]);
 
