@@ -21,6 +21,6 @@ export default function Surah() {
       .catch((err) => console.log(err));
   }, [id, setMessage, setOneSurah]);
 
-  // Catatan: udah berhasil dapetin data per surat nya, trus udah berhasil nanganin klo mislkn id yang dicari itu gaada
+  // Catatan: udah berhasil dapetin data per surat nya, trus udah berhasil nanganin klo mislkn id yang dicari itu gaada. Tinggal dipke aja datanya
   return <h1>{id}</h1>;
 }
