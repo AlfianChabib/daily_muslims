@@ -1,5 +1,6 @@
 import ListCard from "../components/ListCard";
 import Start from "../components/Start";
+import Card from "../components/templates/Home/Card";
 import Navbar from "../components/templates/Navbar/Navbar";
 import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HomeIcon from "../components/templates/Navbar/icon/HomeIcon";
@@ -14,38 +15,6 @@ export default function Home() {
       {start && <Start toggleStart={toggleStart} />}
       <NavbarTop text={"Daily Muslims"} />
       <div className="flex flex-col px-4 mt-4">
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
-        <ListCard />
         <ListCard />
       </div>
       <Navbar variant="sticky">
