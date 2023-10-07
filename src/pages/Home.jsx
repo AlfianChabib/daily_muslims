@@ -1,6 +1,5 @@
 import ListCard from "../components/ListCard";
 import Start from "../components/Start";
-import Card from "../components/templates/Home/Card";
 import Navbar from "../components/templates/Navbar/Navbar";
 import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HomeIcon from "../components/templates/Navbar/icon/HomeIcon";
