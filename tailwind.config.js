@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         "bg-view": "url('/src/assets/bg-view.png')",
       },
+      fontFamily: {
+        "LPMQ": ["LPMQ IsepMisbah"]
+      }
     },
   },
   plugins: [],
