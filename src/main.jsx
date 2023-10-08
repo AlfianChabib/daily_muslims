@@ -4,10 +4,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Home from "./pages/Home.jsx";
-import LastRead from "./pages/LastRead";
 import Favorit from "./pages/Favorit";
 import Error from "./pages/Error";
 import Surah from "./pages/Surah";
+import Menu from "./pages/Menu";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/lastread",
-    element: <LastRead />,
+    path: "/menu",
+    element: <Menu />,
   },
   {
     path: "/favorit",

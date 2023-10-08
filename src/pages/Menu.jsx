@@ -1,20 +1,20 @@
 import Navbar from "../components/templates/Navbar/Navbar";
 import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HomeIcon from "../components/templates/Navbar/icon/HomeIcon";
-import SaveIcon from "../components/templates/Navbar/icon/SaveIcon";
+import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
 import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 
-export default function LastRead() {
+export default function Menu() {
   return (
     <section>
-      <NavbarTop text={"Terakhir Dibaca"} />
-      <div>
-        <h1>Last Read</h1>
+      <NavbarTop text={"Semua Menu"} />
+      <div className="flex flex-col px-4">
+        <h1>Semua Menu</h1>
       </div>
       <Navbar variant="absolute">
         <HomeIcon />
         <StarIcon />
-        <SaveIcon active={true} />
+        <MenuIcon active={true} />
       </Navbar>
     </section>
   );

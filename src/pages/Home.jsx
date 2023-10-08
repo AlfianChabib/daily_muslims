@@ -3,12 +3,12 @@ import Start from "../components/Start";
 import Navbar from "../components/templates/Navbar/Navbar";
 import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HomeIcon from "../components/templates/Navbar/icon/HomeIcon";
-import SaveIcon from "../components/templates/Navbar/icon/SaveIcon";
 import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 import { useStart } from "../stores/Start";
 import { useEffect } from "react";
 import getAll from "../utils/getDataQuran";
 import { useLocalStorage, useMessage, useSurah } from "../stores/Surah";
+import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
@@ -36,15 +36,16 @@ export default function Home() {
       {start && <Start toggleStart={toggleStart} />}
       <NavbarTop text={"Daily Muslims"} />
       <div className="flex flex-col px-4 mt-4">
-        {surahs.map((data) => (
-          <ListCard key={data.number} number={data.number} data={data} />
-        ))}
+        {!start &&
+          surahs.map((data) => (
+            <ListCard key={data.number} number={data.number} data={data} />
+          ))}
       </div>
 
       <Navbar variant={surahs.length < 1 ? "fixed" : "sticky"}>
         <HomeIcon active={true} />
         <StarIcon />
-        <SaveIcon />
+        <MenuIcon />
       </Navbar>
     </section>
   );
