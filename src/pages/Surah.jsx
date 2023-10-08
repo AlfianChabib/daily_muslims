@@ -22,5 +22,9 @@ export default function Surah() {
   }, [id, setMessage, setOneSurah]);
 
   // Catatan: udah berhasil dapetin data per surat nya, trus udah berhasil nanganin klo mislkn id yang dicari itu gaada. Tinggal dipke aja datanya
-  return <h1>{id}</h1>;
+  return (
+    <div>
+      {oneSurah ? <p>{oneSurah.data.tafsir.id}</p> : <h1>{message}</h1>}
+    </div>
+  );
 }

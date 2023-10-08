@@ -8,20 +8,28 @@ import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 import { useStart } from "../stores/Start";
 import { useEffect } from "react";
 import getAll from "../utils/getDataQuran";
-import { useMessage, useSurah } from "../stores/Surah";
+import { useLocalStorage, useMessage, useSurah } from "../stores/Surah";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
   const { surahs, setSurahs } = useSurah();
   const { message, setMessage } = useMessage();
+  const { data, setData } = useLocalStorage();
 
   useEffect(() => {
     return () => {
-      getAll()
-        .then((res) => setSurahs(res.data))
-        .catch((err) => console.log(err));
+      if (data) {
+        setSurahs(data);
+      } else {
+        getAll()
+          .then((res) => {
+            setSurahs(res.data);
+            setData(res.data);
+          })
+          .catch((err) => console.log(err));
+      }
     };
-  }, [setMessage, setSurahs]);
+  }, [setMessage, setSurahs, data, setData]);
 
   return (
     <section className="">
