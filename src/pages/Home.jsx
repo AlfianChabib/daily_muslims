@@ -31,6 +31,8 @@ export default function Home() {
     };
   }, [setMessage, setSurahs, data, setData]);
 
+  console.log(surahs);
+
   return (
     <section className="">
       {start && <Start toggleStart={toggleStart} />}
@@ -38,7 +40,7 @@ export default function Home() {
       <div className="flex flex-col px-4 mt-4">
         {!start &&
           surahs.map((data) => (
-            <ListCard key={data.number} number={data.number} data={data} />
+            <ListCard key={data.nomor} number={data.nomor} data={data} />
           ))}
       </div>
 

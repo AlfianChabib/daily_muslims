@@ -1,8 +1,8 @@
-import { BASEURL } from "./variable/baseURL";
+import { BASE_URL } from "./variable/baseURL";
 
 export default async function getAll() {
   try {
-    const data = await fetch(BASEURL + "/surah");
+    const data = await fetch(BASE_URL + "/surat");
     if (!data) {
       const err = new Error("Internal Server Error");
       throw err;
@@ -16,7 +16,7 @@ export default async function getAll() {
 
 export async function getOneSurah(id) {
   try {
-    const data = await fetch(BASEURL + "/surah/" + id);
+    const data = await fetch(BASE_URL + "/surat/" + id);
     return await data.json();
   } catch (error) {
     return {
