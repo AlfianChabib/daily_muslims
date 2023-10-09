@@ -7,16 +7,32 @@ import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 import { useStart } from "../stores/Start";
 import { useEffect } from "react";
 import getAll from "../utils/getDataQuran";
-import { useLocalStorage, useMessage, useSurah } from "../stores/Surah";
+import {
+  useLastRead,
+  useLocalStorage,
+  useMessage,
+  useSurah,
+} from "../stores/Surah";
 import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
 import LastRead from "../components/LastRead";
-import Search from "../components/Search";
+import Search from "../components/templates/Search/Search";
+import SearchIcon from "../components/templates/Search/SearchIcon";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
-  const { surahs, setSurahs } = useSurah();
+  const {
+    surahs,
+    setSurahs,
+    searchVal,
+    setSearchVal,
+    oneSurah,
+    setOneSurah,
+    isSearching,
+    setIsSearching,
+  } = useSurah();
   const { message, setMessage } = useMessage();
   const { data, setData } = useLocalStorage();
+  const { lastRead, setLastRead } = useLastRead();
 
   useEffect(() => {
     return () => {
@@ -28,32 +44,71 @@ export default function Home() {
             setSurahs(res.data);
             setData(res.data);
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            if (err.code == 500) {
+              setMessage(err.message);
+            }
+          });
       }
     };
   }, [setMessage, setSurahs, data, setData]);
 
-  console.log(surahs);
+  useEffect(() => {
+    if (searchVal != "") {
+      setIsSearching(true);
+      const value = searchVal
+        .trim()
+        .toLowerCase()
+        .split("'")
+        .join("");
+      const oneSurah = surahs.filter(
+        (s) => s.namaLatin.toLowerCase().split("'").join("") == value
+      );
 
-  return (
-    <section className="">
+      if (oneSurah.length > 0) {
+        setOneSurah(oneSurah);
+      } else {
+        setOneSurah(null);
+      }
+    } else {
+      setOneSurah(null);
+      setIsSearching(false);
+    }
+  }, [searchVal, setOneSurah, surahs, setSurahs, setIsSearching]);
+
+  return message ? (
+    <div className="w-full h-full flex justify-center items-center">
+      <h1 className="text-3xl font-bold text-red-600">{message}</h1>
+    </div>
+  ) : (
+    <>
       {start && <Start toggleStart={toggleStart} />}
-      <NavbarTop text={"Daily Muslims"} />
+      <section className="">
+        <NavbarTop text={"Daily Muslims"} />
 
-      <LastRead />
-      <Search />
-      <div className="flex flex-col px-4 mt-4">
-        {!start &&
-          surahs.map((data) => (
-            <ListCard key={data.nomor} number={data.nomor} data={data} />
-          ))}
-      </div>
+        {lastRead && <LastRead />}
 
-      <Navbar variant={surahs.length < 1 ? "fixed" : "sticky"}>
-        <HomeIcon active={true} />
-        <StarIcon />
-        <MenuIcon />
-      </Navbar>
-    </section>
+        <Search value={searchVal} setValue={setSearchVal}>
+          <SearchIcon isSearching={isSearching} />
+        </Search>
+
+        <div className="flex flex-col px-4 mt-4">
+          {isSearching
+            ? oneSurah && (
+                <ListCard number={1} data={oneSurah} oneSurah={true} />
+              )
+            : !start &&
+              surahs.map((data) => (
+                <ListCard key={data.nomor} number={data.nomor} data={data} />
+              ))}
+        </div>
+
+        <Navbar variant={surahs.length < 1 || isSearching ? "fixed" : "sticky"}>
+          <HomeIcon active={true} />
+          <StarIcon />
+          <MenuIcon />
+        </Navbar>
+      </section>
+    </>
   );
 }
