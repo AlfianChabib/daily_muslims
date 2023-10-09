@@ -10,6 +10,10 @@ export default {
       fontFamily: {
         LPMQ: ["LPMQ IsepMisbah"],
       },
+      dropShadow: {
+        dm: "0px 0px 4px rgba(57,125,84, .8)",
+        dm1: "0px 0px 4px rgba(57,125,84, .4)",
+      },
     },
   },
   plugins: [],
