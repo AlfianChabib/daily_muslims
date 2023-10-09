@@ -17,6 +17,7 @@ import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
 import LastRead from "../components/LastRead";
 import Search from "../components/templates/Search/Search";
 import SearchIcon from "../components/templates/Search/SearchIcon";
+import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
@@ -56,11 +57,7 @@ export default function Home() {
   useEffect(() => {
     if (searchVal != "") {
       setIsSearching(true);
-      const value = searchVal
-        .trim()
-        .toLowerCase()
-        .split("'")
-        .join("");
+      const value = searchVal.trim().toLowerCase().split("'").join("");
       const oneSurah = surahs.filter(
         (s) => s.namaLatin.toLowerCase().split("'").join("") == value
       );
@@ -77,9 +74,7 @@ export default function Home() {
   }, [searchVal, setOneSurah, surahs, setSurahs, setIsSearching]);
 
   return message ? (
-    <div className="w-full h-full flex justify-center items-center">
-      <h1 className="text-3xl font-bold text-red-600">{message}</h1>
-    </div>
+    <ErrorMsg>{message}</ErrorMsg>
   ) : (
     <>
       {start && <Start toggleStart={toggleStart} />}
@@ -95,7 +90,11 @@ export default function Home() {
         <div className="flex flex-col px-4 mt-4">
           {isSearching
             ? oneSurah && (
-                <ListCard number={1} data={oneSurah} oneSurah={true} />
+                <ListCard
+                  number={oneSurah[0].nomor}
+                  data={oneSurah}
+                  oneSurah={true}
+                />
               )
             : !start &&
               surahs.map((data) => (
