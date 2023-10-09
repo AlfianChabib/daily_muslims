@@ -7,9 +7,9 @@ import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 export default function Menu() {
   return (
     <section>
-      <NavbarTop text={"Semua Menu"} />
+      <NavbarTop text={"Menu"} />
       <div className="flex flex-col px-4">
-        <h1>Semua Menu</h1>
+        <h1>Menu</h1>
       </div>
       <Navbar variant="absolute">
         <HomeIcon />

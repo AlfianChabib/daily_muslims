@@ -10,7 +10,11 @@ export default async function getAll() {
 
     return await data.json();
   } catch (error) {
-    return { status: 500, message: error.message || "Server Error" };
+    return {
+      status: "failed",
+      code: 500,
+      message: error.message || "Server Error",
+    };
   }
 }
 

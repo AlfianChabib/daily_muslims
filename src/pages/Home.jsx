@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import getAll from "../utils/getDataQuran";
 import { useLocalStorage, useMessage, useSurah } from "../stores/Surah";
 import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
+import LastRead from "../components/LastRead";
+import Search from "../components/Search";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
@@ -35,6 +37,9 @@ export default function Home() {
     <section className="">
       {start && <Start toggleStart={toggleStart} />}
       <NavbarTop text={"Daily Muslims"} />
+
+      <LastRead />
+      <Search />
       <div className="flex flex-col px-4 mt-4">
         {!start &&
           surahs.map((data) => (
