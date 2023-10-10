@@ -4,12 +4,8 @@ import { createJSONStorage, persist } from "zustand/middleware";
 export const useSurah = create((set) => ({
     surahs: [],
     oneSurah: null,
-    searchVal: "",
-    isSearching: false,
     setSurahs: (data) => set({ surahs: data }),
     setOneSurah: (data) => set({ oneSurah: data }),
-    setSearchVal: (val) => set({ searchVal: val }),
-    setIsSearching: (e) => set({ isSearching: e })
 }));
 
 export const useMessage = create((set) => ({
@@ -32,6 +28,7 @@ export const useLocalStorage = create(
 );
 
 export const useLastRead = create(
+
     persist(
         (set) => ({
             lastRead: null,
@@ -43,4 +40,4 @@ export const useLastRead = create(
             version: 1
         }
     )
-)
+);

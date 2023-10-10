@@ -3,6 +3,7 @@ import CardIcon from "./icon/CardIcon";
 import { useState } from "react";
 import { useLastRead } from "../../../stores/Surah";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 AyatCard.propTypes = {
   data: PropTypes.object,
@@ -12,17 +13,40 @@ AyatCard.propTypes = {
 };
 
 export default function AyatCard(props) {
+  // const { id } = useParams();
   const { data, displayArti, surat, numSurat } = props;
   const [isLastRead, setIsLastRead] = useState(false);
   const { lastRead, setLastRead } = useLastRead();
   const ayat = data.nomorAyat;
 
-  useEffect(() => {
-    const hash = window.location.hash.substring(1);
-    if (hash && hash.match(/^\d+$/)) {
-      window.location.replace(`/surah/${numSurat}#${hash}`);
-    }
-  }, [numSurat]);
+  // useEffect(() => {
+  //   if (window.location.href.includes("#")) {
+  //     const hash = window.location.hash.substring(1);
+  //     if (hash && hash.match(/^\d+$/)) {
+  //       console.log(hash);
+  //       const url = `/surah/${numSurat}#${hash}`;
+  //       window.location.replace(url);
+  //     }
+  //   }
+  // }, []);
+  
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const hash = window.location.hash.substring(1);
+  //   if (hash && hash.match(/^\d+$/)) {
+  //     console.log(hash);
+  //     const url = `/surah/${numSurat}#${hash}`;
+  //     window.location.replace(url);
+  //   }
+  // });
+
+  // useEffect(() => {
+  //   if (window.location.href.includes("#")) {
+  //     const hash = window.location.hash.substring(1);
+  //     if (hash && hash.match(/^\d+$/)) {
+  //       window.location.replace(`/surah/${id}${hash}`);
+  //     }
+  //   }
+  // }, [id]);
 
   useEffect(() => {
     if (lastRead) {
