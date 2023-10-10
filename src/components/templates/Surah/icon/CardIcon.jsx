@@ -3,7 +3,7 @@ import LastReadIcon from "./LastReadIcon";
 
 CardIcon.propTypes = {
   handleLastRead: PropTypes.func,
-  isLastRead: PropTypes.bool
+  isLastRead: PropTypes.bool,
 };
 
 export default function CardIcon(props) {
@@ -48,7 +48,7 @@ export default function CardIcon(props) {
         </svg>
       </button>
       <button onClick={handleLastRead}>
-        <LastReadIcon isLastRead={isLastRead}/>
+        <LastReadIcon isLastRead={isLastRead} />
       </button>
     </div>
   );

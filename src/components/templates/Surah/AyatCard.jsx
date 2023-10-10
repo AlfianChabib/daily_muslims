@@ -12,7 +12,8 @@ AyatCard.propTypes = {
   numSurat: PropTypes.string,
 };
 
-export default function AyatCard(props) {
+export default function AyatCard({ data, displayArti }) {
+  const audio = data?.audio["03"];
   // const { id } = useParams();
   const { data, displayArti, surat, numSurat } = props;
   const [isLastRead, setIsLastRead] = useState(false);
@@ -74,7 +75,7 @@ export default function AyatCard(props) {
     >
       <div className="flex justify-between py-[6px] px-3 bg-gray-200">
         <p className="text-[#397D54] font-medium text-sm">{data?.nomorAyat}</p>
-        <CardIcon handleLastRead={handleSetLastRead} isLastRead={isLastRead} />
+        <CardIcon audio={audio} handleLastRead={handleSetLastRead} isLastRead={isLastRead}/>
       </div>
       <div className="flex flex-col justify-between gap-4 py-[10px] px-3 text-[#397D54]">
         <p className="text-end text-xl leading-10 arabic">{data?.teksArab}</p>
