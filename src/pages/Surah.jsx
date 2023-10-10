@@ -27,9 +27,14 @@ export default function Surah() {
           setMessage("Surah you are looking for not found");
           return;
         }
+
+        if (res.status == "failed") {
+          throw res;
+        }
+
         setOneSurah(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch(() => setMessage("Unstable Network"));
   }, [id, setMessage, setOneSurah]);
 
   return (
@@ -46,11 +51,15 @@ export default function Surah() {
                 setDisplayArti={setDisplayArti}
                 displayArti={displayArti}
               />
-              {ayat?.map((item, index) => {
-                return (
-                  <AyatCard key={index} data={item} displayArti={displayArti} />
-                );
-              })}
+              {ayat?.map((item, index) => (
+                <AyatCard
+                  key={index}
+                  data={item}
+                  displayArti={displayArti}
+                  surat={oneSurah?.namaLatin}
+                  numSurat={id}
+                />
+              ))}
             </div>
           </>
         )

@@ -19,7 +19,7 @@ export default function Search(props) {
           onChange={(e) => {
             setValue(e.target.value);
           }}
-          className="bg-transparent w-[90%] focus:outline-[#397D54] focus:outline-none rounded-lg py-2 px-3 mx-1 me-1 text-slate-800"
+          className="bg-transparent w-[100%] focus:outline-[#397D54] focus:outline-none rounded-lg py-2 px-3 mx-1 me-1 text-slate-800"
         />
         {children}
       </div>

@@ -19,7 +19,7 @@ export default function ListCard(props) {
     >
       <div className="flex bg-[#397D54] w-12 h-12 relative rounded-lg justify-center items-center text-white">
         <NumberIcon />
-        <p className="absolute">{number}</p>
+        <p className="absolute">{oneSurah ? 1 : number}</p>
       </div>
       <div className="flex bg-[#397D54] flex-1 ml-2 h-12 rounded-lg py-1 px-2 justify-between">
         {oneSurah ? <Card data={data[0]} /> : <Card data={data} />}

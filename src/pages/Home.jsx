@@ -33,7 +33,7 @@ export default function Home() {
   } = useSurah();
   const { message, setMessage } = useMessage();
   const { data, setData } = useLocalStorage();
-  const { lastRead, setLastRead } = useLastRead();
+  const { lastRead } = useLastRead();
 
   useEffect(() => {
     return () => {
@@ -81,7 +81,7 @@ export default function Home() {
       <section className="">
         <NavbarTop text={"Daily Muslims"} />
 
-        {lastRead && <LastRead />}
+        {lastRead && <LastRead data={lastRead} />}
 
         <Search value={searchVal} setValue={setSearchVal}>
           <SearchIcon isSearching={isSearching} />

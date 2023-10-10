@@ -35,7 +35,7 @@ export const useLastRead = create(
     persist(
         (set) => ({
             lastRead: null,
-            setLastRead: data => set({ lasRead: data })
+            setLastRead: data => set({ lastRead: data })
         }),
         {
             name: "Last read",
