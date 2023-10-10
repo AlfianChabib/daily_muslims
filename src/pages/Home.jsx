@@ -5,7 +5,7 @@ import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HomeIcon from "../components/templates/Navbar/icon/HomeIcon";
 import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 import { useStart } from "../stores/Start";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import getAll from "../utils/getDataQuran";
 import {
   useLastRead,
@@ -21,29 +21,24 @@ import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
-  const {
-    surahs,
-    setSurahs,
-    searchVal,
-    setSearchVal,
-    oneSurah,
-    setOneSurah,
-    isSearching,
-    setIsSearching,
-  } = useSurah();
+  const { surahs, setSurahs } = useSurah();
   const { message, setMessage } = useMessage();
   const { data, setData } = useLocalStorage();
   const { lastRead, setLastRead } = useLastRead();
+  const [search, setSearch] = useState([]);
+  const [filteredList, setFilteredList] = useState("");
 
   useEffect(() => {
     return () => {
       if (data) {
         setSurahs(data);
+        setSearch(data);
       } else {
         getAll()
           .then((res) => {
             setSurahs(res.data);
             setData(res.data);
+            setSearch(res.data);
           })
           .catch((err) => {
             if (err.code == 500) {
@@ -53,25 +48,6 @@ export default function Home() {
       }
     };
   }, [setMessage, setSurahs, data, setData]);
-
-  useEffect(() => {
-    if (searchVal != "") {
-      setIsSearching(true);
-      const value = searchVal.trim().toLowerCase().split("'").join("");
-      const oneSurah = surahs.filter(
-        (s) => s.namaLatin.toLowerCase().split("'").join("") == value
-      );
-
-      if (oneSurah.length > 0) {
-        setOneSurah(oneSurah);
-      } else {
-        setOneSurah(null);
-      }
-    } else {
-      setOneSurah(null);
-      setIsSearching(false);
-    }
-  }, [searchVal, setOneSurah, surahs, setSurahs, setIsSearching]);
 
   return message ? (
     <ErrorMsg>{message}</ErrorMsg>
@@ -83,26 +59,25 @@ export default function Home() {
 
         {lastRead && <LastRead />}
 
-        <Search value={searchVal} setValue={setSearchVal}>
-          <SearchIcon isSearching={isSearching} />
+        <Search
+          data={data}
+          setSearch={setSearch}
+          setFilteredList={setFilteredList}
+          filteredList={filteredList}
+        >
+          <SearchIcon />
         </Search>
 
         <div className="flex flex-col px-4 mt-4">
-          {isSearching
-            ? oneSurah && (
-                <ListCard
-                  number={oneSurah[0].nomor}
-                  data={oneSurah}
-                  oneSurah={true}
-                />
-              )
-            : !start &&
-              surahs.map((data) => (
-                <ListCard key={data.nomor} number={data.nomor} data={data} />
-              ))}
+          {!start &&
+            search.map((data) => (
+              <ListCard key={data.nomor} number={data.nomor} data={data} />
+            ))}
         </div>
 
-        <Navbar variant={surahs.length < 1 || isSearching ? "fixed" : "sticky"}>
+        <Navbar
+          variant={surahs.length < 1 || search.length < 8 ? "fixed" : "sticky"}
+        >
           <HomeIcon active={true} />
           <StarIcon />
           <MenuIcon />

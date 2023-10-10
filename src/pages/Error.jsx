@@ -10,8 +10,8 @@ export default function Error() {
             Page not found.
           </h5>
           <Link
-            className="flex justify-center bg-[#235D3A] text-white py-1 rounded-xl"
             to="/"
+            className="flex justify-center bg-[#235D3A] text-white py-1 rounded-xl"
           >
             <button>Back to Home</button>
           </Link>
