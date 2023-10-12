@@ -18,6 +18,7 @@ import LastRead from "../components/LastRead";
 import Search from "../components/templates/Search/Search";
 import SearchIcon from "../components/templates/Search/SearchIcon";
 import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
+import SpinnerLoading from "../components/templates/Spinner/SpinnerLoading";
 // import SideNavbar from "../components/templates/Navbar/SideNavbar";
 
 export default function Home() {
@@ -57,7 +58,7 @@ export default function Home() {
       {start && <Start toggleStart={toggleStart} />}
       {/* <SideNavbar /> */}
       <section className="">
-        <NavbarTop text={"Daily Muslims"} isPageHome={true}/>
+        <NavbarTop text={"Daily Muslims"} isPageHome={true} />
 
         {lastRead && <LastRead data={lastRead} />}
 
@@ -70,12 +71,16 @@ export default function Home() {
           <SearchIcon />
         </Search>
 
-        <div className="flex flex-col px-4 mt-4">
-          {!start &&
-            search.map((data) => (
-              <ListCard key={data.nomor} number={data.nomor} data={data} />
-            ))}
-        </div>
+        {search.length == 0 ? (
+          <SpinnerLoading />
+        ) : (
+          <div className="flex flex-col px-4 mt-4">
+            {!start &&
+              search.map((data) => (
+                <ListCard key={data.nomor} number={data.nomor} data={data} />
+              ))}
+          </div>
+        )}
 
         <Navbar
           variant={surahs.length < 1 || search.length < 8 ? "fixed" : "sticky"}

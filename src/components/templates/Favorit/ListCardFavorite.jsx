@@ -13,8 +13,6 @@ ListCardFavorite.propTypes = {
 export default function ListCardFavorite(props) {
   const { data, index } = props;
 
-  console.log(data);
-
   return (
     <Link
       to={"/surah/" + data.nomor}

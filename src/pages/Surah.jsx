@@ -6,6 +6,7 @@ import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HeaderSurah from "../components/templates/Surah/HeaderSurah";
 import AyatCard from "../components/templates/Surah/AyatCard";
 import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
+import SpinnerLoading from "../components/templates/Spinner/SpinnerLoading";
 
 export default function Surah() {
   const { id } = useParams();
@@ -37,7 +38,7 @@ export default function Surah() {
       .catch(() => setMessage("Unstable Network"));
   }, [id, setMessage, setOneSurah]);
 
-  return (
+  return oneSurah ? (
     <section>
       {message ? (
         <ErrorMsg>{message}</ErrorMsg>
@@ -65,5 +66,9 @@ export default function Surah() {
         )
       )}
     </section>
+  ) : (
+    <div className="flex w-[100vw] h-[100vh] justify-center items-center bg-white">
+      <SpinnerLoading />
+    </div>
   );
 }
