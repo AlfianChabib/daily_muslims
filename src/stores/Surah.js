@@ -28,7 +28,6 @@ export const useLocalStorage = create(
 );
 
 export const useLastRead = create(
-
     persist(
         (set) => ({
             lastRead: null,
@@ -41,3 +40,17 @@ export const useLastRead = create(
         }
     )
 );
+
+export const useStarSurah = create(
+    persist(
+        set => ({
+            dataStarSurah: [],
+            setDataStarSurah: data => set(({ dataStarSurah }) => ({ dataStarSurah: [...dataStarSurah, data] }))
+        }),
+        {
+            name: "Stared Surah",
+            storage: createJSONStorage(() => localStorage),
+            version: 1
+        }
+    )
+)

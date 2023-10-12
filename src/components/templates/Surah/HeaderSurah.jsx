@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import HeaderIcon from "./HeaderIcon";
 import Bismillah from "./icon/Bismillah";
+import { useStarSurah } from "../../../stores/Surah";
 
 HeaderSurah.propTypes = {
   data: PropTypes.object,
@@ -10,6 +11,19 @@ HeaderSurah.propTypes = {
 
 export default function HeaderSurah(props) {
   const { data, displayArti, setDisplayArti } = props;
+  const { setDataStarSurah } = useStarSurah();
+
+  function handleStarSurah(setIsStared) {
+    const dataSurah = {
+      titleSurah: data?.namaLatin,
+      arti: data?.arti,
+      tempatTurun: data?.tempatTurun,
+      jmlhAyat: data?.jumlahAyat,
+    };
+
+    setDataStarSurah(dataSurah);
+    setIsStared(true);
+  }
 
   return (
     <div className="bg-[#397D54] py-[10px] px-3 rounded-xl drop-shadow-dm">
@@ -28,6 +42,8 @@ export default function HeaderSurah(props) {
           <HeaderIcon
             setDisplayArti={setDisplayArti}
             displayArti={displayArti}
+            handleStarSurah={handleStarSurah}
+            surahTitle={data?.namaLatin}
           />
         </div>
       </div>

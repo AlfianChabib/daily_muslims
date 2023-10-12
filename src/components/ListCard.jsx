@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import NumberIcon from "./templates/Home/icon/NumberIcon";
 import PropTypes from "prop-types";
 import Card from "./templates/Home/Card";
+import BodyCard from "./templates/Card/BodyCard";
+import HeaderCard from "./templates/Card/HeaderCard";
 
 ListCard.propTypes = {
   number: PropTypes.number,
@@ -15,15 +17,15 @@ export default function ListCard(props) {
   return (
     <Link
       to={"/surah/" + number}
-      className="flex pb-2 items-center focus:outline-none focus:outline-slate-400"
+      className="flex pb-2 items-center focus:outline-none "
     >
-      <div className="flex bg-[#397D54] w-12 h-12 relative rounded-lg justify-center items-center text-white">
+      <HeaderCard>
         <NumberIcon />
         <p className="absolute">{oneSurah ? 1 : number}</p>
-      </div>
-      <div className="flex bg-[#397D54] flex-1 ml-2 h-12 rounded-lg py-1 px-2 justify-between">
+      </HeaderCard>
+      <BodyCard>
         {oneSurah ? <Card data={data[0]} /> : <Card data={data} />}
-      </div>
+      </BodyCard>
     </Link>
   );
 }

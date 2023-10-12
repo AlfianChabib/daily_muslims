@@ -18,6 +18,7 @@ import LastRead from "../components/LastRead";
 import Search from "../components/templates/Search/Search";
 import SearchIcon from "../components/templates/Search/SearchIcon";
 import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
+// import SideNavbar from "../components/templates/Navbar/SideNavbar";
 
 export default function Home() {
   const { start, toggleStart } = useStart();
@@ -54,8 +55,9 @@ export default function Home() {
   ) : (
     <>
       {start && <Start toggleStart={toggleStart} />}
+      {/* <SideNavbar /> */}
       <section className="">
-        <NavbarTop text={"Daily Muslims"} />
+        <NavbarTop text={"Daily Muslims"} isPageHome={true}/>
 
         {lastRead && <LastRead data={lastRead} />}
 
