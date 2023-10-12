@@ -3,7 +3,7 @@ import CardIcon from "./icon/CardIcon";
 import { useState } from "react";
 import { useLastRead } from "../../../stores/Surah";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 AyatCard.propTypes = {
   data: PropTypes.object,

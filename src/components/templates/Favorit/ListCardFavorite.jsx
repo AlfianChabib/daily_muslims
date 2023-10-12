@@ -7,16 +7,22 @@ import PropTypes from "prop-types";
 
 ListCardFavorite.propTypes = {
   data: PropTypes.object,
+  index: PropTypes.number,
 };
 
 export default function ListCardFavorite(props) {
-  const { data } = props;
+  const { data, index } = props;
+
+  console.log(data);
 
   return (
-    <Link>
+    <Link
+      to={"/surah/" + data.nomor}
+      className="flex pb-2 items-center focus:outline-none"
+    >
       <HeaderCard>
         <NumberIcon />
-        <p className="absolute">1</p>
+        <p className="absolute">{index + 1}</p>
       </HeaderCard>
       <BodyCard>
         <Card data={data} isFav={true} />

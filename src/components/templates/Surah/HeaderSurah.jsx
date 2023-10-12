@@ -19,11 +19,14 @@ export default function HeaderSurah(props) {
       arti: data?.arti,
       tempatTurun: data?.tempatTurun,
       jmlhAyat: data?.jumlahAyat,
+      nomor: data?.nomor,
     };
 
     setDataStarSurah(dataSurah);
     setIsStared(true);
   }
+
+  console.log(data);
 
   return (
     <div className="bg-[#397D54] py-[10px] px-3 rounded-xl drop-shadow-dm">

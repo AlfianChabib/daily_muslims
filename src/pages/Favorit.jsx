@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/templates/Navbar/Navbar";
-// import NavbarTop from "../components/templates/Navbar/NavbarTop";
+import NavbarTop from "../components/templates/Navbar/NavbarTop";
 import HomeIcon from "../components/templates/Navbar/icon/HomeIcon";
 import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
 import StarIcon from "../components/templates/Navbar/icon/StarIcon";
@@ -12,11 +12,11 @@ export default function Favorit() {
 
   return (
     <section>
-      {/* <NavbarTop text={"Surah Favorit"} /> */}
+      <NavbarTop text={"Surah Favorit"} />
       {dataStarSurah.length > 0 ? (
         <div className="flex flex-col px-4 mt-4">
-          {dataStarSurah.map((d) => (
-            <ListCardFavorite key={d.titleSurah} data={d}/>
+          {dataStarSurah.map((data, index) => (
+            <ListCardFavorite key={index} data={data} index={index} />
           ))}
         </div>
       ) : (
