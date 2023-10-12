@@ -8,12 +8,20 @@ HeaderIcon.propTypes = {
   displayArti: PropTypes.bool,
   surahTitle: PropTypes.string,
   handleStarSurah: PropTypes.func,
+  audioFull: PropTypes.string,
 };
 
 export default function HeaderIcon(props) {
-  const { displayArti, setDisplayArti, surahTitle, handleStarSurah } = props;
+  const {
+    displayArti,
+    setDisplayArti,
+    surahTitle,
+    handleStarSurah,
+    audioFull,
+  } = props;
   const { dataStarSurah } = useStarSurah();
   const [isStared, setIsStared] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
   const handleDisplayArti = () => {
     if (displayArti == true) {
@@ -32,12 +40,54 @@ export default function HeaderIcon(props) {
     if (isStared) {
       return false;
     }
-    
+
     handleStarSurah(setIsStared);
   }
 
+  const togglePlay = () => {
+    const audioElement = document.getElementById(audioFull);
+    if (audioElement.paused) {
+      audioElement.play();
+      setPlaying(true);
+    } else {
+      audioElement.pause();
+      setPlaying(false);
+    }
+  };
+
   return (
     <div className="flex gap-2">
+      <button onClick={() => togglePlay()}>
+        {!playing ? (
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="15" cy="15" r="14.5" stroke="white" />
+            <path
+              d="M21.5515 12.3323L13.3537 7.40743C12.9101 7.1391 12.4066 6.99854 11.8944 7.00001C11.3821 7.00149 10.8794 7.14495 10.4372 7.41582C9.99502 7.6867 9.62915 8.07534 9.37676 8.54227C9.12437 9.0092 8.99444 9.53779 9.00018 10.0743V19.9597C9.00018 20.766 9.30596 21.5394 9.85025 22.1095C10.3945 22.6797 11.1328 23 11.9025 23C12.4121 22.9991 12.9125 22.8581 13.3537 22.5911L21.5515 17.6662C21.992 17.3991 22.3577 17.0154 22.6119 16.5536C22.8662 16.0917 23 15.5679 23 15.0348C23 14.5017 22.8662 13.9779 22.6119 13.5161C22.3577 13.0542 21.992 12.6705 21.5515 12.4035V12.3323ZM20.7029 16.0571L12.505 21.0532C12.3213 21.1622 12.1137 21.2196 11.9025 21.2196C11.6913 21.2196 11.4837 21.1622 11.3 21.0532C11.1168 20.9423 10.9646 20.7829 10.8588 20.591C10.7531 20.3991 10.6974 20.1813 10.6975 19.9597V10.0388C10.6974 9.81716 10.7531 9.59944 10.8588 9.4075C10.9646 9.21555 11.1168 9.05616 11.3 8.94535C11.4845 8.83793 11.6915 8.77991 11.9025 8.77645C12.1134 8.78098 12.3202 8.83893 12.505 8.94535L20.7029 13.9058C20.8861 14.0166 21.0384 14.1759 21.1442 14.3679C21.25 14.5598 21.3057 14.7776 21.3057 14.9993C21.3057 15.2209 21.25 15.4387 21.1442 15.6306C21.0384 15.8226 20.8861 15.9819 20.7029 16.0927V16.0571Z"
+              fill="white"
+            />
+          </svg>
+        ) : (
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="15" cy="15" r="15" fill="white" />
+            <path
+              d="M21.5515 12.3323L13.3537 7.40743C12.9101 7.1391 12.4066 6.99854 11.8944 7.00001C11.3821 7.00149 10.8794 7.14495 10.4372 7.41582C9.99502 7.6867 9.62915 8.07534 9.37676 8.54227C9.12437 9.0092 8.99444 9.53779 9.00018 10.0743V19.9597C9.00018 20.766 9.30596 21.5394 9.85025 22.1095C10.3945 22.6797 11.1328 23 11.9025 23C12.4121 22.9991 12.9125 22.8581 13.3537 22.5911L21.5515 17.6662C21.992 17.3991 22.3577 17.0154 22.6119 16.5536C22.8662 16.0917 23 15.5679 23 15.0348C23 14.5017 22.8662 13.9779 22.6119 13.5161C22.3577 13.0542 21.992 12.6705 21.5515 12.4035V12.3323ZM20.7029 16.0571L12.505 21.0532C12.3213 21.1622 12.1137 21.2196 11.9025 21.2196C11.6913 21.2196 11.4837 21.1622 11.3 21.0532C11.1168 20.9423 10.9646 20.7829 10.8588 20.591C10.7531 20.3991 10.6974 20.1813 10.6975 19.9597V10.0388C10.6974 9.81716 10.7531 9.59944 10.8588 9.4075C10.9646 9.21555 11.1168 9.05616 11.3 8.94535C11.4845 8.83793 11.6915 8.77991 11.9025 8.77645C12.1134 8.78098 12.3202 8.83893 12.505 8.94535L20.7029 13.9058C20.8861 14.0166 21.0384 14.1759 21.1442 14.3679C21.25 14.5598 21.3057 14.7776 21.3057 14.9993C21.3057 15.2209 21.25 15.4387 21.1442 15.6306C21.0384 15.8226 20.8861 15.9819 20.7029 16.0927V16.0571Z"
+              fill="#397D54"
+            />
+          </svg>
+        )}
+      </button>
       <button onClick={handleDisplayArti}>
         <svg
           width="30"
@@ -79,6 +129,12 @@ export default function HeaderIcon(props) {
       <button onClick={handleStar}>
         <StarSurah isStared={isStared} />
       </button>
+      <audio
+        src={audioFull}
+        preload="none"
+        id={audioFull}
+        onEnded={() => setPlaying(false)}
+      ></audio>
     </div>
   );
 }

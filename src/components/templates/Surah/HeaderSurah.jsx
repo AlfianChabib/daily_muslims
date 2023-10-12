@@ -45,10 +45,11 @@ export default function HeaderSurah(props) {
             displayArti={displayArti}
             handleStarSurah={handleStarSurah}
             surahTitle={data?.namaLatin}
+            audioFull={data?.audioFull["03"]}
           />
         </div>
       </div>
-      <Bismillah />
+      {data?.nomor == 1 || data?.nomor == 9 ? null : <Bismillah />}
     </div>
   );
 }
