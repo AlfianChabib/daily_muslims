@@ -7,6 +7,7 @@ import HeaderSurah from "../components/templates/Surah/HeaderSurah";
 import AyatCard from "../components/templates/Surah/AyatCard";
 import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
 import SpinnerLoading from "../components/templates/Spinner/SpinnerLoading";
+import NextPrev from "../components/templates/Surah/NextPrev";
 
 export default function Surah() {
   const { id } = useParams();
@@ -65,6 +66,7 @@ export default function Surah() {
           </>
         )
       )}
+      <NextPrev oneSurah={oneSurah} />
     </section>
   ) : (
     <div className="flex w-[100vw] h-[100vh] justify-center items-center bg-white">
