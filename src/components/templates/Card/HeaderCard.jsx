@@ -7,7 +7,7 @@ HeaderCard.propTypes = {
 export default function HeaderCard(props) {
   const { children } = props;
   return (
-    <div className="flex bg-[#397D54] w-12 h-12 relative rounded-lg justify-center items-center text-white">
+    <div className="flex bg-[#397D54] w-12 h-16 relative rounded-lg justify-center items-center text-white">
       {children}
     </div>
   );
