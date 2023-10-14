@@ -4,7 +4,7 @@ export default function SpinnerLoading() {
       xmlns="http://www.w3.org/2000/svg"
       style={{
         margin: "auto",
-        background: "rgb(241, 242, 243)",
+        backgroundColor: "transparent",
         display: "block",
         shapeRendering: "auto",
       }}

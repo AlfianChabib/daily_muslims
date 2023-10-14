@@ -14,6 +14,25 @@ export default {
         dm: "0px 0px 4px rgba(57,125,84, .8)",
         dm1: "0px 0px 4px rgba(57,125,84, .4)",
       },
+      animation: {
+        "slide": "slide 0.5s linear forwards",
+      },
+      keyframes: {
+        slide: {
+          '0%': {
+            opacity: "0",
+            display: "none",
+            transform: "translateX(500px)"
+          },
+          "50%": {
+            display: "block",
+            opacity: "1"
+          },
+          "100%": {
+            transform: "translateX(0)"
+          }
+        }
+      }
     },
   },
   plugins: [],

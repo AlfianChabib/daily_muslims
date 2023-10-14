@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Humberger from "./humberger/Humberger";
 import PropTypes from "prop-types";
+import { useNavbar } from "../../../stores/NavbarStore";
 
 NavbarTop.propTypes = {
   text: PropTypes.string,
@@ -9,6 +10,7 @@ NavbarTop.propTypes = {
 
 export default function NavbarTop(props) {
   const { text, isPageHome } = props;
+  const { setIsOpen } = useNavbar();
 
   const pageHome = " w-full mx-auto right-0 left-0 justify-between px-6";
   const nonPageHome = "w-full justify-between px-6";
@@ -41,7 +43,13 @@ export default function NavbarTop(props) {
         </Link>
       )}
       <h1 className="text-lg text-[#235D3A] font-semibold">{text}</h1>
-      <div className="flex gap-y-1 flex-col">
+      <div
+        className="flex gap-y-1 flex-col cursor-pointer"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+        role="button"
+      >
         <Humberger child={1} />
         <Humberger child={2} />
         <Humberger child={3} />
