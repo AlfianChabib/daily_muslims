@@ -12,7 +12,7 @@ export default function LastRead(props) {
   }
 
   return (
-    <div className="w-[90%] mx-auto bg-[#397D54] p-3 rounded-2xl mt-2">
+    <div className="w-[95%] mx-auto bg-[#397D54] p-3 rounded-2xl mt-2">
       <p className="text-white font-light">Terakhir Dibaca</p>
       <div className="flex justify-between items-center mt-2">
         <div>
