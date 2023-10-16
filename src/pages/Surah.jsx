@@ -8,6 +8,7 @@ import AyatCard from "../components/templates/Surah/AyatCard";
 import ErrorMsg from "../components/templates/ErrorMsg/ErrorMsg";
 import SpinnerLoading from "../components/templates/Spinner/SpinnerLoading";
 import NextPrev from "../components/templates/Surah/NextPrev";
+import SideNavbar from "../components/templates/Navbar/SideNavbar";
 
 export default function Surah() {
   const { id } = useParams();
@@ -47,6 +48,7 @@ export default function Surah() {
         oneSurah && (
           <>
             <NavbarTop text={"Surah " + oneSurah?.namaLatin} />
+            <SideNavbar />
             <div className="flex flex-col w-full px-4 pt-4 mb-12">
               <HeaderSurah
                 data={oneSurah}

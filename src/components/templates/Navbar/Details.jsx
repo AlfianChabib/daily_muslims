@@ -9,7 +9,7 @@ export default function Details(props) {
   const { children, option } = props;
 
   return (
-    <details className="w-full bg-white p-2 shadow-lg shadow-black/10 cursor-pointer px-4 mb-2">
+    <details className="w-full text-right bg-white p-2 shadow-lg shadow-black/10 cursor-pointer px-4 mb-2 rounded-md">
       <summary className="text-[#397D54] text-xl font-semibold list-none">
         <span className="flex items-center gap-x-2 justify-between">
           <svg

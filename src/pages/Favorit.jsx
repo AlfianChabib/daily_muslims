@@ -6,6 +6,7 @@ import MenuIcon from "../components/templates/Navbar/icon/MenuIcon";
 import StarIcon from "../components/templates/Navbar/icon/StarIcon";
 import { useStarSurah } from "../stores/Surah";
 import ListCardFavorite from "../components/templates/Favorit/ListCardFavorite";
+import SideNavbar from "../components/templates/Navbar/SideNavbar";
 
 export default function Favorit() {
   const { dataStarSurah } = useStarSurah();
@@ -13,6 +14,7 @@ export default function Favorit() {
   return (
     <section>
       <NavbarTop text={"Surah Favorit"} />
+      <SideNavbar />
       {dataStarSurah.length > 0 ? (
         <div className="flex flex-col px-4 mt-4">
           {dataStarSurah.map((data, index) => (

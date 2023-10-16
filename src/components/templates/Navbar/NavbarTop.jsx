@@ -44,7 +44,7 @@ export default function NavbarTop(props) {
       )}
       <h1 className="text-lg text-[#235D3A] font-semibold">{text}</h1>
       <div
-        className="flex gap-y-1 flex-col cursor-pointer"
+        className="flex  flex-col cursor-pointer"
         onClick={() => {
           setIsOpen(true);
         }}
