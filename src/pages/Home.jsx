@@ -57,7 +57,7 @@ export default function Home() {
     <>
       {start && <Start toggleStart={toggleStart} />}
       <SideNavbar />
-      <section className="">
+      <section>
         <NavbarTop text={"Daily Muslims"} isPageHome={true} />
 
         {lastRead && <LastRead data={lastRead} />}

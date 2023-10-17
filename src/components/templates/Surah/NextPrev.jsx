@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useLastRead } from "../../../stores/Surah";
 
 NextPrev.propTypes = {
   oneSurah: PropTypes.object,
 };
 
 export default function NextPrev({ oneSurah }) {
+  const { lastRead } = useLastRead();
+
+  function handleLastRead() {
+    window.location.replace(`/surah/${lastRead.noSurah}#${lastRead.ayat}`);
+  }
+
   return (
     <div
       className={`${
@@ -56,6 +63,15 @@ export default function NextPrev({ oneSurah }) {
           Prev Surah
         </Link>
       )}
+      {oneSurah?.nomor == Number(lastRead?.noSurah) ? (
+        <button
+          className="bg-white font-medium py-1 px-2 rounded-md text-[#235D3A]"
+          onClick={handleLastRead}
+        >
+          Terakhir Dibaca
+        </button>
+      ) : null}
+
       {oneSurah?.suratSelanjutnya.nomor == null ? (
         <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-md text-[#235D3A] font-medium">
           Next Surah

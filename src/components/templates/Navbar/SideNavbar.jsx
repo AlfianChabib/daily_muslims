@@ -11,25 +11,27 @@ export default function SideNavbar() {
 
   return (
     <nav
-      className={`h-[100vh] w-[70%] bg-[#ebebeb] fixed z-30 top-0 right-0 flex flex-col overflow-y-auto ${
+      className={`h-[100vh] w-80 bg-[#ebebeb] fixed z-30 top-0 right-0 flex flex-col ${
         isOpen ? "animate-slide" : "hidden translate-x-[500px]"
       }`}
     >
-      <div className="w-full h-[100px] bg-[#397D54] p-4 relative">
+      <div className="w-full h-[80px] bg-[#397D54] p-4 relative">
         <button
-          className="absolute top-[5px] text-5xl cursor-pointer text-white left-[10px]"
+          className="absolute top-[5px] text-4xl cursor-pointer text-white left-[10px]"
           onClick={() => setIsOpen(false)}
         >
           &times;
         </button>
-        <h1 className="text-right text-white font-bold text-2xl">
-          Daily Muslims
-        </h1>
-        <p className="text-right text-white text-xs">
-          Baca Al-Quran Kapanpun & Dimanapun
-        </p>
+        <div className="border-r-2 border-gray-200 pr-2">
+          <h1 className="text-right text-white font-bold text-2xl">
+            Daily Muslims
+          </h1>
+          <p className="text-right text-white text-xs">
+            Baca Al-Quran Kapanpun & Dimanapun
+          </p>
+        </div>
       </div>
-      
+
       <div className="flex flex-col px-4 my-4">
         <Details option="Theme">
           <ul className="flex justify-around bg-gray-200 my-2 p-2 text-gray-800  rounded-md">

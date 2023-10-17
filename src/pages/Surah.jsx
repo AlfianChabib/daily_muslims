@@ -49,7 +49,7 @@ export default function Surah() {
           <>
             <NavbarTop text={"Surah " + oneSurah?.namaLatin} />
             <SideNavbar />
-            <div className="flex flex-col w-full px-4 pt-4 mb-12">
+            <div className="flex flex-col w-full px-4 mt-4 mb-12">
               <HeaderSurah
                 data={oneSurah}
                 setDisplayArti={setDisplayArti}
