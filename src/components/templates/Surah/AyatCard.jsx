@@ -17,6 +17,7 @@ export default function AyatCard(props) {
   const [isLastRead, setIsLastRead] = useState(false);
   const { lastRead, setLastRead } = useLastRead();
   const ayat = data.nomorAyat;
+  // const id = window.location.href.split("#")[1];
 
   useEffect(() => {
     if (lastRead) {

@@ -15,7 +15,18 @@ export default function Surah() {
   const { oneSurah, setOneSurah } = useSurah();
   const { message, setMessage } = useMessage();
   const [displayArti, setDisplayArti] = useState(false);
+  const [isScroll, setIsScroll] = useState(true);
   const ayat = oneSurah?.ayat;
+  let idCard = window.location.href;
+  idCard = idCard.includes("#") && idCard.split("#")[1];
+  const el = document.getElementById(idCard);
+
+  if (el && isScroll) {
+    document.querySelector("html").classList.remove("scroll-smooth");
+    const lengthTop = el.offsetTop;
+    window.scrollTo(0, lengthTop);
+    setIsScroll(false);
+  }
 
   useEffect(() => {
     setOneSurah(null);

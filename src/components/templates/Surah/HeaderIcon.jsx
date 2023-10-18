@@ -11,6 +11,7 @@ HeaderIcon.propTypes = {
   audioFull: PropTypes.string,
 };
 
+
 export default function HeaderIcon(props) {
   const {
     displayArti,

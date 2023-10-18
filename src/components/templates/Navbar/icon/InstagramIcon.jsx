@@ -6,9 +6,9 @@ InstagramIcon.propTypes = {
 
 export default function InstagramIcon(props) {
   const { href } = props;
-  
+
   return (
-    <a href={href} target="_blank" rel="noreferrer">
+    <a href={href} rel="noreferrer">
       <svg
         width="22"
         height="22"

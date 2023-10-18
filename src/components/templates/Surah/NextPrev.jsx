@@ -17,7 +17,7 @@ export default function NextPrev({ oneSurah }) {
     <div
       className={`${
         oneSurah.ayat.length == 3 ? "absolute" : "sticky"
-      } flex w-full bottom-0 bg-[#235D3A] justify-between p-3`}
+      } flex w-full bottom-0 bg-[#235D3A] justify-between p-3 gap-x-3`}
     >
       {oneSurah?.suratSebelumnya.nomor == null ? (
         <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-md text-[#235D3A] font-medium">
