@@ -63,7 +63,7 @@ export default function HeaderSurah(props) {
         <div className="flex flex-col items-center text-white pt-2 mt-2 border-t">
           <h4 className="text-xl">Deskripsi</h4>
           <p
-            className="text-sm"
+            className="text-sm whitespace-normal text-center"
             dangerouslySetInnerHTML={{ __html: deskripsi }}
           ></p>
         </div>

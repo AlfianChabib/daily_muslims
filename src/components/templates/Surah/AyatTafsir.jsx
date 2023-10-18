@@ -22,10 +22,9 @@ export default function AyatTafsir(props) {
           </button>
         </div>
         <div className="h-[30rem] bg-white py-[6px] px-3 overflow-y-scroll overflow-hidden">
-          <p
-            className="text-[#397D54] font-medium text-sm"
-            dangerouslySetInnerHTML={{ __html: tafsir[ayat - 1].teks }}
-          ></p>
+          <p className="text-[#397D54] whitespace-pre-line font-medium text-sm">
+            {tafsir[ayat - 1].teks}
+          </p>
         </div>
       </div>
     </div>

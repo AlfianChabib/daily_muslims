@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Niat Sholat Jenazah untuk Jenazah Perempuan",
+      "arabic": "اُصَلِّى عَلَى هَذِهِ الْمَيِّتَةِ اَرْبَعَ تَكْبِرَاتٍ فَرْضَ الْكِفَايَةِ مَأْمُوْمًا ِللهِ تَعَالَى",
+      "latin": "Ushollii ‘alaa haadzihill mayyitati arba’a takbirootin fardhol kifaayati ma’muuman lillaahi ta’aalaa",
+      "translation": "Saya niat salat atas mayat ini empat kali takbir fardhu kifayah, sebagai makmum karena Allah Ta’ala.",
+      "catatan":""
+    },
+    {
+        "id": 2,
+        "title": "Niat Sholat Jenazah untuk Jenazah Pria",
+        "arabic": "اُصَلِّى عَلَى هَذَاالْمَيِّتِ اَرْبَعَ تَكْبِرَاتٍ فَرْضَ الْكِفَايَةِ مَأْمُوْمًا ِللهِ تَعَالَى",
+        "latin": "Ushollii ‘alaa haadzal mayyiti arba’a takbirootin fardhol kifaayati ma’muuman lillaahi ta’aalaa",
+        "translation": "Saya niat salat atas mayat ini empat kali takbir fardhu kifayah, sebagai makmum karena Allah Ta’ala",
+        "catatan":""
+      },
+      {
+        "id": 3,
+        "title": "Takbir Pertama",
+        "arabic": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِاَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙالرَّحْمٰنِ الرَّحِيْمِۙمٰلِكِ يَوْمِ الدِّيْنِۗاِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗاِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۙصِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ",
+        "latin": "Bismillahir rahmaa nirrahiim. Alhamdu lilla hi rabbil 'alamin. Ar rahmaanirrahiim. Maaliki yaumiddiin. Iyyaaka na'budu wa iyyaaka nasta'iin. Ihdinash shirraatal musthaqiim. Shiraathal ladziina an'amta 'alaihim ghairil maghduubi 'alaihim waladh-dhaalliin",
+        "translation": "Dengan nama Allah yang maha pengasih, maha penyayang. Segala puji bagi Allah, tuhan seluruh alam, yang maha pengasih, maha penyayang, pemilik hari pembalasan. Hanya kepada engkaulah kami menyembah dan hanya kepada engkaulah kami mohon pertolongan. Tunjukilah kami jalan yang lurus (yaitu) jalan orang-orang yang telah engkau beri nikmat kepadanya, bukan (jalan) mereka yang dimurkai, dan bukan (pula jalan) mereka yang sesat.",
+        "catatan":"Setelah membaca niat, lakukan takbiratul ihram. Ini dilakukan dengan meletakkan tangan di atas pusar sebagaimana sholat pada umumnya."
+      },
+      {
+        "id": 4,
+        "title": "Takbir Kedua",
+        "arabic": "اَللَّهُمَّ صَلِّ عَلىَ مُحَمَّدٍ وَعَلىَ آلِ مُحَمَّدٍ كَماَ صَلَّيْتَ عَلىَ إِبْرَاهِيْمَ وَعَلىَ آلِ إِبْرَاهِيْمَ إِنـَّكَ حَمِيْدٌ مَجِيْدٌ اَللَّهُمَّ باَرِكْ عَلىَ مُحَمَّدٍ وَعَلىَ آلِ مُحَمَّدٍ كَماَ باَرَكْتَ عَلىَ إِبْرَاهِيْمَ وَعَلىَ آلِ إِبْرَاهِيْمَ إِنـَّكَ حَمِيْدٌ مَجِيْدٌ",
+        "latin": "Allohumma sholli ‘alaa Muhammad wa ‘alaa aali Muhammad kamaa shollaita ‘alaa Ibroohiima wa ‘alaa aali Ibroohim, innaka hamiidum majiid. Allohumma baarik ‘alaa Muhammad wa ‘alaa aali Muhammad kamaa baarokta ‘alaa Ibroohiima wa ‘alaa aali Ibroohim, innaka hamiidum majiid.",
+        "translation": "Ya Allah, berilah rahmat kepada Nabi Muhammad dan keluarga Nabi Muhammad, Sebagaimana Engkau telah memberikan rahmat kepada Nabi Ibrahim dan keluarga Nabi Ibrahim,Sesungguhnya Engkau Maha Terpuji lagi Maha Mulia, Ya Allah, berilah keberkahan kepada Nabi Muhammad dan keluarga Nabi Muhammad, Sebagaimana Engkau telah memberikan keberkahan kepada Nabi Ibrahim dan keluarga Nabi Ibrahim, Sesungguhnya Engkau Maha Terpuji lagi Maha Mulia.",
+        "catatan":"Takbir dilakukan dengan mengangkat tangan setinggi telinga atau sejajar bahu. Kemudian, kembali meletakkan tangan di atas pusar. Kemudian membaca salawat Nabi dan bisa memilih salawat Ibrahimiyah yang dianggap lebih afdal"
+      },
+      {
+        "id": 5,
+        "title": "Takbir Ketiga",
+        "arabic": "اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ وَأَكْرِمْ نُزُلَهُ وَوَسِّعْ مُدْخَلَهُ وَاغْسِلْهُ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ وَنَقِّهِ مِنَ الْخَطَايَا كَمَا نَقَّيْتَ الثَّوْبَ الأَبْيَضَ مِنَ الدَّنَسِ وَأَبْدِلْهُ دَارًا خَيْرًا مِنْ دَارِهِ وَأَهْلاً خَيْرًا مِنْ أَهْلِهِ وَزَوْجًا خَيْرًا مِنْ زَوْجِهِ وَأَدْخِلْهُ الْجَنَّةَ وَأَعِذْهُ مِنْ عَذَابِ الْقَبْرِ أَوْ مِنْ عَذَابِ النَّارِ",
+        "latin": "Allohummaghfirlahu warhamhu wa’aafihi wa’fu ‘anhu wa akrim nuzulahu wawassi’ Mudkholahu waghsilhu bil maa-i wats tsalji wal barod, Wa naqqihi minal khothooyaa kamaa naqqoitats tsaubal abyadho minad danas, Wa abdilhu daaron khoiron min daarihi wa ahlan khoiron min ahlihi wa zaujan khoiron min zaujihi, Wa adkhilhul jannata wa a’idzhu min ‘adzaabin qobri au min ‘adzaabin naar.",
+        "translation": "Ya Allah, ampunilah dan rahmatilah dia. Bebaskanlah dan maafkanlah dia. Luaskanlah kuburnya dan mandikanlah ia dengan air, salju, dan embun, Sucikan ia dari seluruh kesalahan seperti dibersihkannya kain putih dari kotoran, Berikan ia rumah yang lebih baik dari rumahnya (di dunia), keluarga yang lebih baik dari keluarganya, Pasangan yang lebih baik dari pasangannya, lalu masukkanlah ia ke dalam surga dan lindungilah ia dari cobaan kubur dan azab neraka.",
+        "catatan":"Untuk doa yang dibaca هُ (hu) diganti dengan هَا (ha) apabila jenazah perempuan."
+      },
+      {
+        "id": 6,
+        "title": "Takbir Keempat",
+        "arabic": "اللَّهُمَّ لاَ تَحْرِمْنَا أَجْرَهُ وَلاَ تَفْتِنَّا بَعْدَهُ وَ اغْفِرْ لَنَا وَلَهُ",
+        "latin": "Allohumma laa tahrimnaa ajrohu wa laa taftinnaa ba’dahu waghfirlanaa walahu.",
+        "translation": "Ya Allah, jangan haramkan kami dari pahalanya dan jangan cobai kami sepeninggalnya. Ampunilah kami dan ampunilah dia.",
+        "catatan":"Untuk doa yang dibaca هُ (hu) diganti dengan هَا (ha) apabila jenazah perempuan."
+      },
+      {
+        "id": 7,
+        "title": "Salam",
+        "arabic": "السَّلاَمُ عَلَيْكَ وَرَحْمَةُ اللَّهِ وَ بَرَكَاتُهُ",
+        "latin": "Assalaamu’alaikum warohmatulloohi wabarookaatuh.",
+        "translation": "Semoga keselamatan rahmat Allah dan berkah-Nya limpahkan kepada kalian.",
+        "catatan":"Jangan lupa untuk salam untuk mengakhiri sholat jenazah. Yakni mengucapkan salam sambil memalingkan kepala ke kanan dan ke kiri"
+      }
+  ]
+}

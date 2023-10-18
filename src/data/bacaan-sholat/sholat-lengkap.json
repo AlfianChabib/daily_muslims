@@ -1,0 +1,118 @@
+{
+  "niat-sholat": [
+    {
+      "id": 1,
+      "title": "Niat Sholat Subuh",
+      "arabic": "أُصَلِّى فَرْضَ الصُّبْح رَكَعتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى",
+      "latin": "Ushalli fardhas subhi rak’ataini mustqbilal qiblati adaa-an (ma’mumam/imaaman) lillaahi ta’aalaa",
+      "translation": "Saya berniat sholat fardu subuh dua rakaat menghadap kiblat karena Allah Ta'ala/Ma'mum karena Allah Ta'ala/Imam karena Allah Ta'ala"
+    },
+    {
+      "id": 2,
+      "title": "Niat Sholat Zuhur",
+      "arabic": "اُصَلِّيْ فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى",
+      "latin": "Ushalli fardhadz dzuhri arba’a raka’aatin mustqbilal qiblati adaa-an (ma’mumam/imaaman) lillaahi ta’aalaa",
+      "translation": "Saya berniat sholat fardu zuhur empat rakaat menghadap kiblat karena Allah Ta'ala/Ma'mum karena Allah Ta'ala/Imam karena Allah Ta'ala"
+    },
+    {
+      "id": 3,
+      "title": "Niat Sholat Asar",
+      "arabic": "أُصَلِّى فَرْضَ العَصْرِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى",
+      "latin": "Ushalli fardhal ashri arba’a raka’aatin mustqbilal qiblati adaa-an (ma’mumam/imaaman) lillaahi ta’aalaa",
+      "translation": "Saya berniat sholat fardu asar empat rakaat menghadap kiblat karena Allah Ta'ala/Ma'mum karena Allah Ta'ala/Imam karena Allah Ta'ala"
+    },
+    {
+      "id": 4,
+      "title": "Niat Sholat Magrib",
+      "arabic": "أُصَلِّى فَرْضَ المَغْرِبِ ثَلاَثَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَ",
+      "latin": "Ushalli fardhal maghribi salasa’ raka’aatin mustqbilal qiblati adaa-an (ma’mumam/imaaman) lillaahi ta’aalaa",
+      "translation": "Saya berniat sholat fardu magrib tiga rakaat menghadap kiblat karena Allah Ta'ala/Ma'mum karena Allah Ta'ala/Imam karena Allah Ta'ala"
+    },
+    {
+      "id": 5,
+      "title": "Niat Sholat Isya",
+      "arabic": "أُصَلِّى فَرْضَ العِشَاء ِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى",
+      "latin": "Ushalli fardhal ‘isyaa-i raka’aatin mustqbilal qiblati adaa-an (ma’mumam/imaaman) lillaahi ta’aalaa",
+      "translation": "Saya berniat sholat fardu isya empat rakaat menghadap kiblat karena Allah Ta'ala/Ma'mum karena Allah Ta'ala/Imam karena Allah Ta'ala"
+    }
+  ],
+  "doa-bacaan-sholat": [
+    {
+      "id": 1,
+      "title": "Takbiratul Ihram",
+      "arabic": "الله أكبر",
+      "latin": "Allaahu akbar",
+      "translation": "Allah Maha Besar"
+    },
+    {
+      "id": 2,
+      "title": "Bacaan Doa Iftitah",
+      "arabic": "للهُ اَكْبَرُ كَبِرًا وَالْحَمْدُ لِلهِ كَشِيْرًا وَسُبْحَانَ اللهِ بُكْرَةً وَاَصِيْلًا . اِنِّى وَجَّهْتُ وَجْهِيَ لِلَّذِيْ فَطَرَالسَّمَاوَاتِ وَالْااَرْضَ حَنِيْفًا مُسْلِمًا وَمَا اَنَا مِنَ الْمُشْرِكِيْنَ . اِنَّ صَلَاتِيْ وَنُسُكِيْ وَمَحْيَايَ وَمَمَاتِيْ لِلهِ رَبِّ الْعَا لَمِيْنَ . لاَ شَرِيْكَ لَهُ وَبِذَ لِكَ اُمِرْتُ وَاَنَ مِنَ الْمُسْلِمِيْنَ",
+      "latin": "Allaahu akbar kabiiraw walhamdu lillaahi katsiira wa subhaanallaahi bukrataw wa'ashiila. Wajjahtu wajhiya lilladzii fataras samawaati wal ardha, haniifam muslimaw wamaa anaa minal musyrikiin. Inna shalaatii wa nusukii wa mahyaaya wa mamaatii lillaahi rabbil aalamiin. laa syariikalahu wa bidzaalika umirtu wa anaa minal muslimiin",
+      "translation": "Allah maha besar, maha sempurna kebesaran-Nya. Segala puji bagi Allah, pujian yang sebanyak-banyaknya. Dan maha suci Allah sepanjang pagi dan petang. Kuhadapkan wajahku kepada zat yang telah menciptakan langit dan bumi dengan penuh ketulusan dan kepasrahan dan aku bukanlah termasuk orang-orang yang musyrik. Sesungguhnya sholatku, ibadahku, hidupku dan matiku semuanya untuk Allah, penguasa alam semesta. Tidak ada sekutu bagi-Nya dan dengan demikianlah aku diperintahkan dan aku termasuk orang-orang yang muslim."
+    },
+    {
+      "id": 3,
+      "title": "Bacaan Al-Fatihah",
+      "arabic": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِاَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙالرَّحْمٰنِ الرَّحِيْمِۙمٰلِكِ يَوْمِ الدِّيْنِۗاِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗاِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۙصِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ",
+      "latin": "Bismillahir rahmaa nirrahiim. Alhamdu lilla hi rabbil 'alamin. Ar rahmaanirrahiim. Maaliki yaumiddiin. Iyyaaka na'budu wa iyyaaka nasta'iin. Ihdinash shirraatal musthaqiim. Shiraathal ladziina an'amta 'alaihim ghairil maghduubi 'alaihim waladh-dhaalliin",
+      "translation": "Dengan nama Allah yang maha pengasih, maha penyayang. Segala puji bagi Allah, tuhan seluruh alam, yang maha pengasih, maha penyayang, pemilik hari pembalasan. Hanya kepada engkaulah kami menyembah dan hanya kepada engkaulah kami mohon pertolongan. Tunjukilah kami jalan yang lurus (yaitu) jalan orang-orang yang telah engkau beri nikmat kepadanya, bukan (jalan) mereka yang dimurkai, dan bukan (pula jalan) mereka yang sesat."
+    },
+    {
+      "id": 4,
+      "title": "Bacaan Rukuk",
+      "arabic": "سُبْحَانَ رَبِّىَ الْعَظِيمِ وَبِحَمْدِهِ",
+      "latin": "Subhaana robbiyal 'adziimi wabihamdih (dibaca sebanyak 3 kali)",
+      "translation": "Maha suci tuhan yang maha agung serta memujilah aku kepadanya."
+    },
+    {
+      "id": 5,
+      "title": "Doa I’tidal",
+      "arabic": "",
+      "latin": "Sami'allaahu liman hamidah",
+      "translation": "Allah maha mendengar terhadap orang yang memujinya."
+    },
+    {
+      "id": 6,
+      "title": "Bacaan I’tidal",
+      "arabic": "رَبَّنَا لَكَ الْحَمْدُ مِلْءَ السَّمَوَاتِ وَالأَرْضِ وَمِلْءَ مَا شِئْتَ مِنْ شَىْءٍ بَعْدُ",
+      "latin": "Robbanaa lakal hamdu mil us samawaati wamil ul ardhi wamil u maa syi'ta min syain ba'du.",
+      "translation": "Ya Allah tuhan kami, bagimu segala puji sepenuh langit dan bumi, dan sepenuh sesuatu yang engkau kehendaki sesudah itu."
+    },
+    {
+      "id": 7,
+      "title": "Bacaan Sujud",
+      "arabic": "سُبْحَانَ رَبِّىَ الْأَعْلَى وَبِحَمْدِهِ",
+      "latin": "Sub haana robbiyal a'la wabihamdih. (Dibaca sebanyak 3 kali)",
+      "translation": "Maha suci tuhan yang maha tinggi serta memujilah aku kepadanya."
+    },
+    {
+      "id": 8,
+      "title": "Bacaan Duduk di Antara Dua Sujud",
+      "arabic": "رَبِّ اغْفِرْ لِي وَارْحَمْنِي وَاجْبُرْنِي وَارْفَعْنِي وَارْزُقْنِي وَاهْدِنِي وَعَافَنِي وَاعْفُ عَنِّي",
+      "latin": "Robbighfirlii warhamnii wajburnii warfa'nii warzuqnii wahdinii wa'aafinii wa'fu 'annii.",
+      "translation": "Ya Allah ampunilah dosaku, belas kasihanilah aku, cukupkanlah segala kekurangan dan angkatlah derajatku, berilah rizki kepadaku, berilah aku petunjuk, berilah kesehatan kepadaku dan berilah ampunan kepadaku."
+    },
+    {
+      "id": 9,
+      "title": "Bacaan Tasyahud Awal",
+      "arabic": "التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِىُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ",
+      "latin": "Attahiyyaatul mubaarokaatush sholawaatuth thoyyibaatu lillaah. Assalaamu 'alaika ayyuhan nabiyyu wa rohmatullahi wa barokaatuh. Assalaaamu'alainaa wa 'alaa 'ibaadillaahish shoolihiin. Asyhadu allaa ilaaha illallah wa asyhadu anna muhammadar rosuulullah. Allahumma sholli 'alaa muhammad.",
+      "translation": "Segala penghormatan, keberkahan, salawat dan kebaikan hanya bagi Allah. Semoga salam sejahtera selalu tercurahkan kepadamu wahai nabi, demikian pula rahmat Allah dan berkah-Nya dan semoga salam sejahtera selalu tercurah kepada kami dan hamba-hamba Allah yang saleh. Aku bersaksi bahwa tiada tuhan kecuali Allah dan aku bersaksi bahwa Muhammad adalah utusan Allah. Ya Allah, berilah rahmat kepada Nabi Muhammad."
+    },
+    {
+      "id": 10,
+      "title": "Bacaan Tasyahud Akhir",
+      "arabic": "اَللَّهُمَّ صَلِّ عَلىَ مُحَمَّدٍ وَعَلىَ آلِ مُحَمَّدٍ كَماَ صَلَّيْتَ عَلىَ إِبْرَاهِيْمَ وَعَلىَ آلِ إِبْرَاهِيْمَ إِنـَّكَ حَمِيْدٌ مَجِيْدٌ اَللَّهُمَّ باَرِكْ عَلىَ مُحَمَّدٍ وَعَلىَ آلِ مُحَمَّدٍ كَماَ باَرَكْتَ عَلىَ إِبْرَاهِيْمَ وَعَلىَ آلِ إِبْرَاهِيْمَ إِنـَّكَ حَمِيْدٌ مَجِيْدٌ",
+      "latin": "Allahumma sholli 'alaa muhammad wa 'alaa aali muhammad kamaa shollaita 'alaa ibroohim wa 'alaa aali ibroohimm innaka hamiidum majiid. Alloohumma baarik 'alaa muhammad wa 'alaa aali muhammad kamaa baarokta 'alaa ibroohim wa 'alaa aali ibroohimm innaka hamiidum majiid.",
+      "translation": "Ya Allah, berilah rahmat kepada Nabi Muhammad dan keluarga Nabi Muhammad sebagaimana engkau telah memberikan rahmat kepada Nabi Ibrahim dan keluarga Nabi Ibrahim. Sesungguhnya engkau maha terpuji lagi maha mulia. Ya Allah, berilah keberkahan kepada Nabi Muhammad dan keluarga Nabi Muhammad sebagaimana engkau telah memberikan keberkahan kepada Nabi Ibrahim dan keluarga Nabi Ibrahim. Sesungguhnya engkau maha terpuji lagi maha mulia."
+    },
+    {
+      "id": 11,
+      "title": "Salam",
+      "arabic": "",
+      "latin": "Assalaamu alaikum wa rahmatullah.",
+      "translation": "Semoga keselamatan dan rahmat Allah dilimpahkan kepadamu."
+    }
+  ]
+}
