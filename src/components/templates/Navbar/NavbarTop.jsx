@@ -23,6 +23,7 @@ export default function NavbarTop(props) {
     >
       {isPageHome ? null : (
         <Link
+          title="Back to Home"
           to={"/"}
           className="text-[#235D3A] hover:underline active:underline"
         >
@@ -44,6 +45,7 @@ export default function NavbarTop(props) {
       )}
       <h1 className="text-lg text-[#235D3A] font-semibold">{text}</h1>
       <div
+        title="Menu"
         className="flex  flex-col cursor-pointer"
         onClick={() => {
           setIsOpen(true);

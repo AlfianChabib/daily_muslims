@@ -32,6 +32,7 @@ export default function Search(props) {
     <form>
       <div className="relative mx-4 bg-gray-300 px-2 py-1 rounded-xl my-2 flex items-center">
         <input
+          title="Cari Surat"
           type="text"
           placeholder="Cari Surat"
           onChange={(e) => setFilteredList(e.target.value)}

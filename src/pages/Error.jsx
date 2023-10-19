@@ -13,7 +13,7 @@ export default function Error() {
             to="/"
             className="flex justify-center bg-[#235D3A] text-white py-1 rounded-xl"
           >
-            <button>Back to Home</button>
+            <button title="Back to Home">Back to Home</button>
           </Link>
         </div>
       </div>

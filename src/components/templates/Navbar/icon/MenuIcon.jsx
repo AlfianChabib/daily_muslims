@@ -9,7 +9,7 @@ export default function MenuIcon(props) {
   const { active } = props;
   return (
     <li>
-      <Link to={"/menu"}>
+      <Link title="Menu" to={"/menu"}>
         {active ? (
           <svg
             width="30"

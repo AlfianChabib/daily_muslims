@@ -10,7 +10,7 @@ export default function HomeIcon(props) {
 
   return (
     <li>
-      <Link to={"/"}>
+      <Link title="Back to Home" to={"/"}>
         {active ? (
           <svg
             width="30"
