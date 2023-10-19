@@ -17,6 +17,7 @@ export default function SideNavbar() {
     >
       <div className="w-full h-[80px] bg-[#397D54] p-4 relative">
         <button
+          title="Close"
           className="absolute top-[5px] text-4xl cursor-pointer text-white left-[10px]"
           onClick={() => setIsOpen(false)}
         >

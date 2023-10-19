@@ -61,7 +61,7 @@ export default function HeaderIcon(props) {
 
   return (
     <div className="flex gap-2">
-      <button onClick={() => togglePlay()}>
+      <button title="Play" onClick={() => togglePlay()}>
         {!playing ? (
           <svg
             width="30"
@@ -92,7 +92,7 @@ export default function HeaderIcon(props) {
           </svg>
         )}
       </button>
-      <button onClick={handleDisplayArti}>
+      <button title="Arti" onClick={handleDisplayArti}>
         {!displayArti ? (
           <svg
             width="30"
@@ -124,7 +124,7 @@ export default function HeaderIcon(props) {
         )}
       </button>
 
-      <button onClick={toggleDisplayDeskripsi}>
+      <button title="Deskripsi" onClick={toggleDisplayDeskripsi}>
         {!displayDeskripsi ? (
           <svg
             width="30"
@@ -171,7 +171,7 @@ export default function HeaderIcon(props) {
           </svg>
         )}
       </button>
-      <button onClick={handleStar}>
+      <button title="Star" onClick={handleStar}>
         <StarSurah isStared={isStared} />
       </button>
       <audio

@@ -15,6 +15,7 @@ export default function AyatTafsir(props) {
         <div className="flex items-center justify-between text-white py-[6px] px-3 bg-[#397D54]">
           <p>Tafsir {ayat}</p>
           <button
+            title="Close"
             className="text-[#397D54] bg-white w-7 h-7 text-center leading-none font-medium text-xl rounded-full"
             onClick={() => setDisplayTafsir(false)}
           >

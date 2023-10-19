@@ -16,6 +16,7 @@ export default function ListCard(props) {
 
   return (
     <Link
+      title="link to surah"
       to={"/surah/" + number}
       className="flex pb-2 items-center focus:outline-none "
     >

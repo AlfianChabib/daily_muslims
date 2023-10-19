@@ -10,7 +10,7 @@ export default function StarIcon(props) {
 
   return (
     <li>
-      <Link to={"/favorit"}>
+      <Link title="Favorit" to={"/favorit"}>
         {active ? (
           <svg
             width="30"

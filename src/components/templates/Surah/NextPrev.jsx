@@ -20,7 +20,10 @@ export default function NextPrev({ oneSurah }) {
       } flex w-full bottom-0 bg-[#235D3A] justify-between z-40 p-3 gap-x-3`}
     >
       {oneSurah?.suratSebelumnya.nomor == null ? (
-        <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-sm text-[#235D3A] text-xs font-medium">
+        <button
+          title="Prev Surah"
+          className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-sm text-[#235D3A] text-xs font-medium"
+        >
           <span>
             <svg
               width="8"
@@ -41,6 +44,7 @@ export default function NextPrev({ oneSurah }) {
         </button>
       ) : (
         <Link
+          title="Prev Surah"
           to={`/surah/${oneSurah?.suratSebelumnya.nomor}`}
           className="flex items-center gap-1 py-1 px-2 bg-white rounded-sm text-[#235D3A] text-xs font-medium"
         >
@@ -65,6 +69,7 @@ export default function NextPrev({ oneSurah }) {
       )}
       {oneSurah?.nomor == Number(lastRead?.noSurah) ? (
         <button
+          title="Last Read"
           className="bg-white font-medium py-1 px-2 rounded-sm text-[#235D3A] text-xs"
           onClick={handleLastRead}
         >
@@ -73,7 +78,10 @@ export default function NextPrev({ oneSurah }) {
       ) : null}
 
       {oneSurah?.suratSelanjutnya.nomor == null ? (
-        <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-sm text-[#235D3A] text-xs font-medium">
+        <button
+          title="Next Surah"
+          className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-sm text-[#235D3A] text-xs font-medium"
+        >
           Next Surah
           <span>
             <svg
@@ -94,6 +102,7 @@ export default function NextPrev({ oneSurah }) {
         </button>
       ) : (
         <Link
+          title="Next Surah"
           to={`/surah/${oneSurah?.suratSelanjutnya.nomor}`}
           className="flex items-center gap-1 py-1 px-2 bg-white rounded-sm text-[#235D3A] text-xs font-medium"
         >

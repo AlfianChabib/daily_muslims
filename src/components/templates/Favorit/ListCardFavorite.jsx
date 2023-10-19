@@ -15,6 +15,7 @@ export default function ListCardFavorite(props) {
 
   return (
     <Link
+      title="link to surah"
       to={"/surah/" + data.nomor}
       className="flex pb-2 items-center focus:outline-none"
     >

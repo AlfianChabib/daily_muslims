@@ -27,6 +27,7 @@ export default function Favorit() {
             Anda Belum Menambahkan <span>Surah ke Favorit</span>
           </h2>
           <Link
+            title="Back to Home"
             to={"/"}
             className="flex justify-center bg-[#235D3A] text-white py-1 px-4  rounded-xl"
           >

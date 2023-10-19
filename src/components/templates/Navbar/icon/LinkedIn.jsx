@@ -8,7 +8,7 @@ export default function LinkedIn(props) {
   const { href } = props;
 
   return (
-    <a href={href} target="_blank" rel="noreferrer">
+    <a title="LinkedIn" href={href} target="_blank" rel="noreferrer">
       <svg
         width="22"
         height="21"
