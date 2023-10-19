@@ -10,7 +10,7 @@ export default function Navbar(props) {
 
   return (
     <nav
-      className={`flex flex-col w-full mx-auto ${variant} bottom-0 z-50 left-0 right-0`}
+      className={`flex flex-col w-full mx-auto ${variant} bottom-0 z-40 left-0 right-0`}
     >
       <ul className="flex justify-evenly bg-[#235D3A] py-2 items-center">
         {children}

@@ -45,8 +45,8 @@ export default function AyatCard(props) {
   }
 
   return (
-    <div className="mb-4 pt-16 -mt-16" id={`${data?.nomorAyat}`}>
-      <div className="flex flex-col mt-3 bg-white drop-shadow-dm1 rounded-md overflow-hidden">
+    <div className="pt-16 -mt-16" id={`${data?.nomorAyat}`}>
+      <div className="flex flex-col mt-2 bg-white drop-shadow-dm1 rounded-md overflow-hidden">
         <div className="flex justify-between py-[6px] px-3 bg-gray-200">
           <p className="text-[#397D54] font-medium text-sm">
             {data?.nomorAyat}

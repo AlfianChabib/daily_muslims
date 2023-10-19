@@ -11,7 +11,7 @@ export default function SideNavbar() {
 
   return (
     <nav
-      className={`h-[100vh] w-80 bg-[#ebebeb] fixed z-30 top-0 right-0 flex flex-col ${
+      className={`h-[100vh] w-80 bg-[#ebebeb] fixed z-50 top-0 right-0 flex flex-col shadow-xl shadow-[#235D3A] ${
         isOpen ? "animate-slide" : "hidden translate-x-[500px]"
       }`}
     >
@@ -33,7 +33,7 @@ export default function SideNavbar() {
         </div>
       </div>
 
-      <div className="flex flex-col px-4 my-4">
+      <div className="flex flex-col px-4 my-4 overflow-y-scroll pb-10">
         <Details option="Theme">
           <ul className="flex justify-around bg-gray-200 my-2 p-2 text-gray-800  rounded-md">
             <Li text={"Light"} active={true} />
@@ -89,6 +89,9 @@ export default function SideNavbar() {
           </a>
         </Details>
       </div>
+      <p className="text-center font-medium w-full text-[#397D54] absolute bottom-0 py-4 bg-white">
+        Copyright © 2023 Daily Muslims
+      </p>
     </nav>
   );
 }
