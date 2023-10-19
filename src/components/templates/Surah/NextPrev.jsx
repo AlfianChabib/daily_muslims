@@ -17,10 +17,10 @@ export default function NextPrev({ oneSurah }) {
     <div
       className={`${
         oneSurah.ayat.length == 3 ? "absolute" : "sticky"
-      } flex w-full bottom-0 bg-[#235D3A] justify-between p-3 gap-x-3`}
+      } flex w-full bottom-0 bg-[#235D3A] justify-between z-40 p-3 gap-x-3`}
     >
       {oneSurah?.suratSebelumnya.nomor == null ? (
-        <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-md text-[#235D3A] font-medium">
+        <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-sm text-[#235D3A] text-xs font-medium">
           <span>
             <svg
               width="8"
@@ -42,7 +42,7 @@ export default function NextPrev({ oneSurah }) {
       ) : (
         <Link
           to={`/surah/${oneSurah?.suratSebelumnya.nomor}`}
-          className="flex items-center gap-1 py-1 px-2 bg-white rounded-md text-[#235D3A] font-medium"
+          className="flex items-center gap-1 py-1 px-2 bg-white rounded-sm text-[#235D3A] text-xs font-medium"
         >
           <span>
             <svg
@@ -65,7 +65,7 @@ export default function NextPrev({ oneSurah }) {
       )}
       {oneSurah?.nomor == Number(lastRead?.noSurah) ? (
         <button
-          className="bg-white font-medium py-1 px-2 rounded-md text-[#235D3A]"
+          className="bg-white font-medium py-1 px-2 rounded-sm text-[#235D3A] text-xs"
           onClick={handleLastRead}
         >
           Terakhir Dibaca
@@ -73,7 +73,7 @@ export default function NextPrev({ oneSurah }) {
       ) : null}
 
       {oneSurah?.suratSelanjutnya.nomor == null ? (
-        <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-md text-[#235D3A] font-medium">
+        <button className="flex items-center gap-1 py-1 px-2 bg-gray-400 rounded-sm text-[#235D3A] text-xs font-medium">
           Next Surah
           <span>
             <svg
@@ -95,7 +95,7 @@ export default function NextPrev({ oneSurah }) {
       ) : (
         <Link
           to={`/surah/${oneSurah?.suratSelanjutnya.nomor}`}
-          className="flex items-center gap-1 py-1 px-2 bg-white rounded-md text-[#235D3A] font-medium"
+          className="flex items-center gap-1 py-1 px-2 bg-white rounded-sm text-[#235D3A] text-xs font-medium"
         >
           Next Surah
           <span>

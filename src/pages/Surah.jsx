@@ -16,6 +16,7 @@ export default function Surah() {
   const { message, setMessage } = useMessage();
   const [displayArti, setDisplayArti] = useState(false);
   const [isScroll, setIsScroll] = useState(true);
+  const [tafsir, setTafsir] = useState(null);
   const ayat = oneSurah?.ayat;
   let idCard = window.location.href;
   idCard = idCard.includes("#") && idCard.split("#")[1];
@@ -51,6 +52,16 @@ export default function Surah() {
       .catch(() => setMessage("Unstable Network"));
   }, [id, setMessage, setOneSurah]);
 
+  const TAFSIR_URL = `https://equran.id/api/v2/tafsir/${id}`;
+  useEffect(() => {
+    const getTafsir = () => {
+      fetch(TAFSIR_URL)
+        .then((res) => res.json())
+        .then((data) => setTafsir(data.data));
+    };
+    return getTafsir;
+  }, [setTafsir, oneSurah, TAFSIR_URL]);
+
   return oneSurah ? (
     <section>
       {message ? (
@@ -65,6 +76,7 @@ export default function Surah() {
                 data={oneSurah}
                 setDisplayArti={setDisplayArti}
                 displayArti={displayArti}
+                deskripsi={tafsir?.deskripsi}
               />
               {ayat?.map((item, index) => (
                 <AyatCard
@@ -73,6 +85,7 @@ export default function Surah() {
                   displayArti={displayArti}
                   surat={oneSurah?.namaLatin}
                   numSurat={id}
+                  tafsir={tafsir?.tafsir}
                 />
               ))}
             </div>

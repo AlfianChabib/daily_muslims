@@ -6,10 +6,13 @@ CardIcon.propTypes = {
   handleLastRead: PropTypes.func,
   isLastRead: PropTypes.bool,
   audio: PropTypes.any,
+  ayat: PropTypes.number,
+  tafsir: PropTypes.array,
+  tafsirClick: PropTypes.func,
 };
 
 export default function CardIcon(props) {
-  const { handleLastRead, isLastRead, audio } = props;
+  const { handleLastRead, isLastRead, audio, tafsirClick } = props;
 
   const [playing, setPlaying] = useState(false);
 
@@ -26,7 +29,7 @@ export default function CardIcon(props) {
 
   return (
     <div className="flex gap-4">
-      <button>
+      <button onClick={tafsirClick}>
         <svg
           width="22"
           height="20"
