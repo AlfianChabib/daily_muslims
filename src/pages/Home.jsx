@@ -71,7 +71,7 @@ export default function Home() {
           <SearchIcon />
         </Search>
 
-        {search.length == 0 ? (
+        {search?.length == 0 ? (
           <SpinnerLoading />
         ) : (
           <div className="flex flex-col px-4 mt-4">
@@ -83,7 +83,9 @@ export default function Home() {
         )}
 
         <Navbar
-          variant={surahs.length < 1 || search.length < 8 ? "fixed" : "sticky"}
+          variant={
+            surahs?.length < 1 || search?.length < 8 ? "fixed" : "sticky"
+          }
         >
           <HomeIcon active={true} />
           <StarIcon />

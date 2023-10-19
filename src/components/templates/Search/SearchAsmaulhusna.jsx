@@ -6,7 +6,6 @@ SearchAsmaulhusna.propTypes = {
 };
 
 export default function SearchAsmaulhusna({ value, setSearchTerm }) {
-  console.log(value);
   return (
     <form>
       <div className="mx-2 bg-gray-300 py-1 rounded-xl my-2 flex items-center">
