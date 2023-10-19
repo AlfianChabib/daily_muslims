@@ -7,10 +7,6 @@ LastRead.propTypes = {
 export default function LastRead(props) {
   const { data } = props;
 
-  // function handleRedirect() {
-  //   window.location.replace(`/surah/${data.noSurah}#${data.ayat}`);
-  // }
-
   return (
     <div className="mx-4 bg-[#397D54] p-3 rounded-xl my-2">
       <p className="text-white font-light">Terakhir Dibaca</p>
@@ -22,7 +18,6 @@ export default function LastRead(props) {
         <a
           href={`/surah/${data.noSurah}#${data.ayat}`}
           className="bg-white text-center text-[#397D54] py-1 rounded-md w-[115px] transition-colors cursor-pointer hover:bg-gray-300"
-          // onClick={handleRedirect}
         >
           Lanjutkan
         </a>
