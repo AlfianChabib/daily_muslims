@@ -17,6 +17,7 @@ export default function LastRead(props) {
           <p className="text-white font-light text-sm">Ayat : {data.ayat}</p>
         </div>
         <Link
+          reloadDocument
           title="Lanjutkan"
           to={`/surah/${data.noSurah}#${data.ayat}`}
           className="bg-white text-center text-[#397D54] py-1 rounded-md w-[115px] transition-colors cursor-pointer hover:bg-gray-300"
