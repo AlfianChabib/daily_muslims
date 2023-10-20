@@ -65,8 +65,6 @@ export default function Home() {
       });
   }, [setSurahs, setData, setMessage]);
 
-  console.log("data" + data);
-
   return message ? (
     <ErrorMsg>{message}</ErrorMsg>
   ) : (
