@@ -11,7 +11,7 @@ export default function MenuCard({ title, link }) {
     <Link
       title={title}
       to={link}
-      className="border-2 border-[#235D3A] rounded-lg text-[#235D3A] font-medium  text-center py-3"
+      className="border-2 border-[#235D3A] hover:bg-[#235D3A] active:bg-[#235D3A] active:text-white transition-colors hover:text-white rounded-lg text-[#235D3A] font-medium  text-center py-3"
     >
       {title}
     </Link>
