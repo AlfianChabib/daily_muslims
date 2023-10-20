@@ -9,7 +9,7 @@ export default function SaveIcon(props) {
   const { active } = props;
   return (
     <li>
-      <Link to={"/lastread"}>
+      <Link title="Last Read" to={"/lastread"}>
         {active ? (
           <svg
             width="22"

@@ -16,7 +16,7 @@ body {
 }
 
 section {
-  @apply flex flex-col relative bg-white max-w-xl mx-auto min-h-screen;
+  @apply flex flex-col relative bg-white max-w-xl mx-auto min-h-screen pt-12;
 }
 
 .arabic {
