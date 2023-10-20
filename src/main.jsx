@@ -33,6 +33,9 @@ const router = createBrowserRouter([
   {
     path: "/surah/:id",
     element: <Surah />,
+    loader: async ({ params }) => {
+      return fetch(`https://equran.id/api/v2/surah/${params.id}`);
+    },
   },
   {
     path: "/asmaulhusna",
