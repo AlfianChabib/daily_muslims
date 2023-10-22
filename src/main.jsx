@@ -15,6 +15,7 @@ import Tahlil from "./pages/MenuPages/Tahlil";
 import Istighosah from "./pages/MenuPages/Istighosah";
 import BacaanSholat from "./pages/MenuPages/BacaanSholat";
 import Wirid from "./pages/MenuPages/Wirid";
+import LastRead from "./pages/LastRead";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/surah/:id",
     element: <Surah />,
+  },
+  {
+    path: "/lastread",
+    element: <LastRead />,
   },
   {
     path: "/asmaulhusna",

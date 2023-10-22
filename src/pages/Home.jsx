@@ -30,26 +30,40 @@ export default function Home() {
   const [search, setSearch] = useState([]);
   const [filteredList, setFilteredList] = useState("");
 
+  // useEffect(() => {
+  //   return () => {
+  //     if (!data) {
+  //       getAll()
+  //         .then((res) => {
+  //           setSurahs(res.data);
+  //           setData(res.data);
+  //           setSearch(res.data);
+  //         })
+  //         .catch((err) => {
+  //           if (err.code == 500) {
+  //             setMessage(err.message);
+  //           }
+  //         });
+  //     } else {
+  //       setSurahs(data);
+  //       setSearch(data);
+  //     }
+  //   };
+  // }, [setMessage, setSurahs, data, setData]);
+
   useEffect(() => {
-    return () => {
-      if (data) {
-        setSurahs(data);
-        setSearch(data);
-      } else {
-        getAll()
-          .then((res) => {
-            setSurahs(res.data);
-            setData(res.data);
-            setSearch(res.data);
-          })
-          .catch((err) => {
-            if (err.code == 500) {
-              setMessage(err.message);
-            }
-          });
-      }
-    };
-  }, [setMessage, setSurahs, data, setData]);
+    getAll()
+      .then((res) => {
+        setSurahs(res.data);
+        setData(res.data);
+        setSearch(res.data);
+      })
+      .catch((err) => {
+        if (err.code == 500) {
+          setMessage(err.message);
+        }
+      });
+  }, [setSurahs, setData, setMessage]);
 
   return message ? (
     <ErrorMsg>{message}</ErrorMsg>
@@ -76,7 +90,7 @@ export default function Home() {
         ) : (
           <div className="flex flex-col px-4 mt-4">
             {!start &&
-              search.map((data) => (
+              search?.map((data) => (
                 <ListCard key={data.nomor} number={data.nomor} data={data} />
               ))}
           </div>
